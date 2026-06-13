@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Claude 繁體中文介面",
+  "version": "1.0.0",
+  "description": "將 Claude.ai 左側導覽列與系統介面中文化，不影響對話內容",
+  "permissions": ["storage"],
+  "host_permissions": ["https://claude.ai/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://claude.ai/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Claude 中文介面"
+  }
+}
